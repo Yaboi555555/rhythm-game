@@ -1,0 +1,1 @@
+bg_text = "★  MADE MY NIGHT   ♪   LE SSERAFIM ";
