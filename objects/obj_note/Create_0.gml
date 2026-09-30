@@ -3,8 +3,8 @@ lane = 0;
 target_y = 600;
 hit = false;
 missed = false;
-x = 500;
-y = 100;
+x = 2000;
+y = 2000;
 
 hold_duration = 0;
 hold_points = 0;
