@@ -1,3 +1,21 @@
+
+if (!variable_global_exists("master_volume")) {
+    global.master_volume = 1.0;
+}
+
+if (!variable_global_exists("note_travel_time")) {
+    global.note_travel_time = 2.0;
+}
+
+if (!variable_global_exists("lane_keys")) {
+    global.lane_keys = [
+        ord("D"),
+        ord("F"),
+        ord("J"),
+        ord("K")
+    ];
+}
+
 keys = [
     ord("D"),
     ord("F"),
@@ -14,7 +32,13 @@ receptor_x = [
 
 receptor_y = 600;
 
-note_travel_time = 2.0;
+if (variable_global_exists("note_travel_time")) {
+    note_travel_time = global.note_travel_time;
+} else {
+    global.note_travel_time = 2.0;
+    note_travel_time = 2.0;
+}
+
 hit_window = 0.200;
 
 UIScore = 0;
@@ -43,3 +67,5 @@ flash_index = 0;
 
 flash_alpha = 0;
 flash_color = make_color_rgb(180, 80, 255);
+
+// settings

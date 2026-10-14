@@ -6,6 +6,7 @@ songs = [
     ["MADE MY NIGHT","LE SSERAFIM",snd_MadeMyNight_prev,rm_Made_My_Night,spr_MMN_cover,125,"2:06",3],
     ["GRACIE","NAOMI SCOTT",snd_Gracie_prev,rm_Gracie,spr_Gracie_cover,111,"2:54",3],
     ["BLINDING LIGHTS","THE WEEKND",snd_BlindingLights_prev,rm_BlindingLights,spr_BlindingLights_cover,171,"3:20",4],
+	["ENERGY","AVA MAX, BIA",snd_Energy_prev,rm_Energy,spr_Energy_cover,130,"3:02",2],
 ];
 song_count = array_length(songs);
 

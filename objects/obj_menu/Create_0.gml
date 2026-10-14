@@ -5,6 +5,7 @@ scroll_offset = 0;
 songs = [
     ["SONG SELECT","!2 NEW!",0 ,rm_songselect],
     ["SETTINGS","& ACCESSIBILITY",0 ,rm_settings],
+	["TUTORIAL","SONG MEDLEY",0 ,rm_Gracie],
 ];
 song_count = array_length(songs);
 

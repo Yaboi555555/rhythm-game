@@ -68,3 +68,8 @@ for (var i = 0; i < song_count; i++)
         0.15
     );
 }
+
+
+if (keyboard_check_pressed(vk_escape)) {
+        room_goto(rm_menu);
+}

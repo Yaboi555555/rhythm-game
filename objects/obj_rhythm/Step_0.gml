@@ -28,25 +28,10 @@ while (chart_index < array_length(chart))
     }
 }
 
-if (keyboard_check_pressed(ord("D")))
-{
-    hit_note(0);
-}
-
-if (keyboard_check_pressed(ord("F")))
-{
-    hit_note(1);
-}
-
-if (keyboard_check_pressed(ord("J")))
-{
-    hit_note(2);
-}
-
-if (keyboard_check_pressed(ord("K")))
-{
-    hit_note(3);
-}
+if (keyboard_check_pressed(global.lane_keys[0])) hit_note(0);
+if (keyboard_check_pressed(global.lane_keys[1])) hit_note(1);
+if (keyboard_check_pressed(global.lane_keys[2])) hit_note(2);
+if (keyboard_check_pressed(global.lane_keys[3])) hit_note(3);
 
 if (flash_index < array_length(flash_times))
 {
