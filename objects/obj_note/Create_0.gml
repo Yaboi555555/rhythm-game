@@ -8,8 +8,4 @@ y = 2000;
 
 hold_duration = 0;
 hold_points = 0;
-
-
-hit = false;
-missed = false;
 holding = false;

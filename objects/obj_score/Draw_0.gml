@@ -18,3 +18,9 @@ draw_text(
     75,
     "COMBO: " + string(obj_rhythm.combo)
 );
+
+draw_text(
+    1200,
+    110,
+    "MAX COMBO: " + string(obj_rhythm.max_combo)
+);

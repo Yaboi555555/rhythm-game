@@ -1,21 +1,17 @@
-var time_until_hit =
-    hit_time - obj_rhythm.song_position;
-
+var time_until_hit = hit_time - obj_rhythm.song_position;
 x = obj_rhythm.receptor_x[lane];
-
 y = target_y - (time_until_hit / obj_rhythm.note_travel_time) * 700;
 
 // norm miss
-if (!hit &&
-    !missed &&
-    obj_rhythm.song_position >
-    hit_time + obj_rhythm.hit_window)
-{
+if (!hit && !missed && obj_rhythm.song_position > hit_time + obj_rhythm.hit_window) {
     missed = true;
 
     obj_rhythm.notes_missed++;
     obj_rhythm.combo = 0;
-
+	
+	with (obj_rhythm) {
+    acapella_muted_until = current_time + 450;
+	}
     show_judgement("MISS", lane);
 
     instance_destroy();
@@ -40,8 +36,7 @@ if (hit && hold_duration > 0)
             hold_duration
         );
 
-        var hold_progress =
-            held_time / hold_duration;
+        var hold_progress =held_time / hold_duration;
         var new_hold_points = hold_progress * 100; //percentage based, max points 100 head 100 body = 200
 
         var points_this_step = new_hold_points - hold_points;
@@ -63,17 +58,10 @@ if (hit && hold_duration > 0)
     else
     {
         var held_time = obj_rhythm.song_position - hold_start_time;
-
-        held_time = clamp(
-            held_time,
-            0,
-            hold_duration
-        );
+        held_time = clamp(held_time, 0, hold_duration);
         var hold_progress = held_time / hold_duration;
         var final_hold_points = hold_progress * 100;
         var remaining_points = final_hold_points - hold_points;
-
-
         if (remaining_points > 0)
         {
             obj_rhythm.UIScore += remaining_points;

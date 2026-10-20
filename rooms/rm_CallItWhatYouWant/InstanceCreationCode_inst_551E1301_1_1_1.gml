@@ -1,0 +1,1 @@
+bg_text = "★  CALL IT WHAT YOU WANT   ♪   FAT DOG ";

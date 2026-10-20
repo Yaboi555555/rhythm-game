@@ -9,8 +9,8 @@
   "name":"obj_songselect",
   "overriddenProperties":[],
   "parent":{
-    "name":"menu",
-    "path":"folders/objects/menu.yy",
+    "name":"discontinued",
+    "path":"folders/objects/discontinued.yy",
   },
   "parentObjectId":null,
   "persistent":false,

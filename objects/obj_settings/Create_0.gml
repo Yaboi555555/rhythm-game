@@ -8,7 +8,7 @@ rebind_lane = -1;
 songs = [
     ["SONG SELECT","!2 NEW!",0 ,rm_songselect],
     ["SETTINGS","& ACCESSIBILITY",0 ,rm_settings],
-	["TUTORIAL","SONG MEDLEY",0 ,rm_Gracie],
+	["TUTORIAL","SONG MEDLEY",0 ,rm_Spaghetti],
 ];
 song_count = array_length(songs);
 
@@ -27,7 +27,7 @@ for (var i = 0; i < song_count; i++)
 
 // settings
 if (!variable_global_exists("master_volume")) {
-    global.master_volume = 1.0;
+    global.master_volume = 0.5;
 }
 
 if (!variable_global_exists("note_travel_time")) {

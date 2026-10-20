@@ -9,8 +9,8 @@
   "name":"obj_perfect",
   "overriddenProperties":[],
   "parent":{
-    "name":"maingame",
-    "path":"folders/objects/maingame.yy",
+    "name":"discontinued",
+    "path":"folders/objects/discontinued.yy",
   },
   "parentObjectId":null,
   "persistent":false,

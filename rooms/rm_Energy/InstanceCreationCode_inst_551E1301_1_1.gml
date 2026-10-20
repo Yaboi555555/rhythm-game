@@ -1,1 +1,1 @@
-bg_text = "★  BLINDING LIGHTS   ♪   THE WEEKND ";
+bg_text = "★  ENERGY   ♪   AVA MAX, BIA ";

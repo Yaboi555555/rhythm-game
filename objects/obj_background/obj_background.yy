@@ -10,8 +10,8 @@
   "name":"obj_background",
   "overriddenProperties":[],
   "parent":{
-    "name":"maingame",
-    "path":"folders/objects/maingame.yy",
+    "name":"menu",
+    "path":"folders/objects/menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

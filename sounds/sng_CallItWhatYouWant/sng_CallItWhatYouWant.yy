@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sng_CallItWhatYouWant",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":170.08617,
+  "exportDir":"",
+  "name":"sng_CallItWhatYouWant",
+  "parent":{
+    "name":"Call It What You Want",
+    "path":"folders/songs/songs/Call It What You Want.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sng_CallItWhatYouWant.mp3",
+  "volume":0.0,
+}

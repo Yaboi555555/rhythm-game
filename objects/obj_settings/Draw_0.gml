@@ -51,7 +51,7 @@ var slider_y = volume_y + 15;
 draw_set_color(c_gray);
 draw_rectangle(slider_left, slider_y - 5, slider_right, slider_y + 5, false);
 
-draw_set_color(c_aqua);
+draw_set_color(c_white);
 draw_rectangle(
     slider_left,
     slider_y - 5,
@@ -84,7 +84,7 @@ draw_rectangle(
 
 draw_text(panel_x, speed_y - 25, "NOTE SPEED");
 
-var speed_value = (global.note_travel_time - 0.75) / 2.25;
+var speed_value = (3.0 - global.note_travel_time) / 2.25;
 
 draw_set_color(c_black);
 draw_rectangle(slider_left, speed_y + 10, slider_right, speed_y + 20, false);
@@ -214,7 +214,7 @@ if (selected_setting == 1) {
 }
 // controls
 if (selected_setting == i + 2) {
-    draw_set_color(c_aqua);
+    draw_set_color(c_yellow);
     draw_rectangle(
         button_x - button_w / 2 - 6,
         button_y - button_h / 2 - 6,
@@ -226,7 +226,7 @@ if (selected_setting == i + 2) {
 
 // back, i know this is inefficient but it WORKS
 if (selected_setting == 6) {
-    draw_set_color(c_aqua);
+    draw_set_color(c_yellow);
     draw_rectangle(
         center_x - 128,
         back_y - 33,

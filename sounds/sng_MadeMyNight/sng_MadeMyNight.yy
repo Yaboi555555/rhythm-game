@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"sng_MadeMyNight",
   "parent":{
-    "name":"songs",
-    "path":"folders/songs/songs.yy",
+    "name":"Made My Night",
+    "path":"folders/songs/songs/Made My Night.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sng_MadeMyNight.mp3",
-  "volume":0.5,
+  "volume":0.0,
 }

@@ -9,8 +9,7 @@ while (chart_index < array_length(chart))
 
     if (song_position >= note_time - note_travel_time)
     {
-        var note = instance_create_layer(
-            receptor_x[lane],
+        var note = instance_create_layer(receptor_x[lane],
             -100,
             "Instances",
             obj_note
@@ -38,7 +37,6 @@ if (flash_index < array_length(flash_times))
     if (song_position >= flash_times[flash_index])
     {
         flash_alpha = 0.35;
-
         flash_index++;
     }
 }
@@ -50,4 +48,10 @@ if (flash_alpha > 0)
     {
         flash_alpha = 0;
     }
+}
+// sound
+if (current_time < acapella_muted_until) {
+    audio_sound_gain(acapella_voice, 0, 0);
+} else {
+    audio_sound_gain(acapella_voice, global.master_volume, 0);
 }

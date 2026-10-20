@@ -1,1 +1,1 @@
-room_goto(rm_Gracie);
+room_goto(rm_Spaghetti);

@@ -1,3 +1,4 @@
+
 function hit_note(_lane)
 {
     var closest_note = noone;
@@ -9,16 +10,11 @@ function hit_note(_lane)
     {
         var note = instance_find(obj_note, i);
 
-        if (note.lane == _lane &&
-            !note.hit &&
-            !note.missed)
+        if (note.lane == _lane && !note.hit && !note.missed)
         {
-            var difference = abs(
-                note.hit_time -
-                obj_rhythm.song_position
-            );
+            var difference = abs(obj_rhythm.song_position - note.hit_time);
 
-            if (difference < closest_difference)
+            if (difference <= obj_rhythm.hit_window && difference < closest_difference)
             {
                 closest_difference = difference;
                 closest_note = note;
@@ -31,21 +27,9 @@ function hit_note(_lane)
         return;
     }
 
-    var timing_error = abs(
-        closest_note.hit_time -
-        obj_rhythm.song_position
-    );
-
-    if (timing_error > obj_rhythm.hit_window)
-    {
-        return;
-    }
-
-    var hit_score =
-        100 * (
-            1 -
-            timing_error / obj_rhythm.hit_window
-        );
+    var raw_timing_error = obj_rhythm.song_position - closest_note.hit_time;
+    var timing_error = abs(raw_timing_error);
+    var hit_score = 100 * (1 - timing_error / obj_rhythm.hit_window); //BIG IMPORTANY FORMULA
 
     hit_score = clamp(hit_score, 1, 100);
 
@@ -66,23 +50,34 @@ function hit_note(_lane)
         show_judgement("BAD", _lane);
     }
 
+    var receptor_x = 440 + (_lane * 120);
+
+    var receptor = instance_nearest(receptor_x, 600, obj_receptor);
+
+    if (receptor != noone)
+    {
+        receptor.pulse = 1;
+        receptor.flash = hit_score / 100;
+    }
+
     obj_rhythm.UIScore += hit_score;
     obj_rhythm.notes_hit++;
     obj_rhythm.accuracy_total += hit_score;
     obj_rhythm.combo++;
 
+    obj_rhythm.max_combo = max(obj_rhythm.max_combo, obj_rhythm.combo);
+
     if (closest_note.hold_duration > 0)
     {
         closest_note.hit = true;
         closest_note.holding = true;
-
         closest_note.hold_start_time =
             obj_rhythm.song_position;
-
         closest_note.hold_points = 0;
 
         return;
     }
+
     with (closest_note)
     {
         instance_destroy();

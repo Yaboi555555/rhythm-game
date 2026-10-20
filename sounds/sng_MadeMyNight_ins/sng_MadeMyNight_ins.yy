@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sng_MadeMyNight_ins",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":126.00163,
+  "exportDir":"",
+  "name":"sng_MadeMyNight_ins",
+  "parent":{
+    "name":"Made My Night",
+    "path":"folders/songs/songs/Made My Night.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sng_MadeMyNight_ins.mp3",
+  "volume":1.0,
+}

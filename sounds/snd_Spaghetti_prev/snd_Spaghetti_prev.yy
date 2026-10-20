@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_Spaghetti_prev",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":17.7,
+  "exportDir":"",
+  "name":"snd_Spaghetti_prev",
+  "parent":{
+    "name":"previews",
+    "path":"folders/songs/previews.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_Spaghetti_prev.mp3",
+  "volume":1.0,
+}

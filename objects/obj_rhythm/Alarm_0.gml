@@ -1,5 +1,4 @@
-var note = instance_create_layer(
-    500,
+var note = instance_create_layer(500,
     100,
     "Instances",
     obj_note

@@ -14,13 +14,13 @@
   "exportDir":"",
   "name":"sng_Energy",
   "parent":{
-    "name":"songs",
-    "path":"folders/songs/songs.yy",
+    "name":"Energy",
+    "path":"folders/songs/songs/Energy.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sng_Energy.mp3",
-  "volume":1.0,
+  "volume":0.0,
 }
