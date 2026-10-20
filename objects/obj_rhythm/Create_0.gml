@@ -3,6 +3,7 @@ acapella_voice = -1;
 acapella_muted_until = 0;
 max_combo = 0;
 
+
 if (!variable_global_exists("master_volume")) {
     global.master_volume = 1.0;
 }
@@ -53,3 +54,6 @@ flash_times = [5.25, 8.50, 12.00, 16.75, 20.50];
 flash_index = 0;
 flash_alpha = 0;
 flash_color = make_color_rgb(180, 80, 255);
+
+song_start_time = current_time;
+results_triggered = false;

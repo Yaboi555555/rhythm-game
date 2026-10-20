@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_show_judgement",
   "parent":{
-    "name":"scripts",
-    "path":"folders/scripts.yy",
+    "name":"maingame",
+    "path":"folders/scripts/maingame.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

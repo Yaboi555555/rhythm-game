@@ -1,5 +1,7 @@
-song_position = audio_sound_get_track_position(music);
-
+if (instrumental_voice != -1 && audio_is_playing(instrumental_voice))
+{
+    song_position = audio_sound_get_track_position(instrumental_voice);
+}
 
 while (chart_index < array_length(chart))
 {
@@ -55,3 +57,19 @@ if (current_time < acapella_muted_until) {
 } else {
     audio_sound_gain(acapella_voice, global.master_volume, 0);
 }
+
+//end
+
+if (!results_triggered && current_time - song_start_time >= (global.selected_song_length + 2) * 1000)
+{
+    results_triggered = true;
+
+    global.results_score = UIScore;
+    global.results_hits = notes_hit;
+    global.results_misses = notes_missed;
+    global.results_max_combo = max_combo;
+
+    room_goto(rm_results);
+}
+
+show_debug_message("Position: " + string(song_position) + " / Length: " + string(global.selected_song_length));

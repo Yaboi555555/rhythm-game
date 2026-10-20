@@ -1,1 +1,0 @@
-room_goto(rm_Made_My_Night);
